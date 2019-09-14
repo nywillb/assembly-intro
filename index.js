@@ -5,7 +5,7 @@ setInterval(() => {
 }, 1000)
 
 window.onSpotifyWebPlaybackSDKReady = () => {
-    const token = propmt("What is your spotify token?");
+    const token = propmt("What is your spotify token? Generate it here: https://bit.ly/2kkavm4");
     const player = new Spotify.Player({
         name: 'Assembly Site',
         getOAuthToken: cb => { cb(token); }
