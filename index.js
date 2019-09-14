@@ -4,6 +4,14 @@ setInterval(() => {
     document.getElementById("time").innerText = new Date().toLocaleTimeString()
 }, 1000)
 
+const submittedBy = prompt("Who made this playlist?")
+
+if (submittedBy) {
+    document.getElementById("playlist-submitted-by").textContent = `Playlist submitted by ${submittedBy}`
+} else {
+    document.getElementById("playlist-submitted-by").remove()
+}
+
 window.onSpotifyWebPlaybackSDKReady = () => {
     const token = prompt("What is your spotify token? Generate it here: https://bit.ly/2kkavm4");
     const player = new Spotify.Player({
@@ -22,11 +30,13 @@ window.onSpotifyWebPlaybackSDKReady = () => {
         console.log("STATE")
         const track = state.track_window.current_track
 
-        console.log(track)
+        console.log(state)
 
         const artists = track.artists.map((artist, i) => {
             return artist.name;
         })
+
+        document.getElementById("album-art").setAttribute("src", track.album.images[0].url)
 
         let formattedArtists;
 
