@@ -1,0 +1,100 @@
+html,body,.main {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 3fr 9fr 2.6fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    padding: 5;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.datetime {
+    text-align: right;
+}
+
+.body {
+    height: 100%;
+}
+
+#album-art {
+    object-fit: cover;
+    padding-right: 10px;
+    height: 100%;
+}
+
+#time {
+    padding-bottom: 0;
+    margin-bottom: 5px;
+    font-weight: lighter;
+}
+
+#date {
+    margin-top: 0;
+    font-weight: lighter;
+}
+
+.title-text {
+    margin-bottom: 0;
+    font-size: 3em;
+}
+
+.song {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #666;
+    color: white;
+    align-items: stretch;
+    height: 100%;
+}
+
+#song-name {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+#song-artist {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+.song-title {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.song-request {
+    background-color: #777;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 100%;
+}
+
+.announcements {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
